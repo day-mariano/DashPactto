@@ -13,7 +13,7 @@ import ViewCarouselIcon from "@mui/icons-material/ViewCarousel";
 import OndemandVideoIcon from "@mui/icons-material/OndemandVideo";
 import SubscriptionsIcon from "@mui/icons-material/Subscriptions";
 import SettingsIcon from "@mui/icons-material/Settings";
-import { useState } from "react";
+import { use, useState } from "react";
 
 export default function Home() {
   const [isAsideOpen, setAsideOpen] = useState(true);
@@ -24,6 +24,15 @@ export default function Home() {
   function openAside() {
     setAsideOpen(true);
   }
+
+  const [isEmailDone, setIsEmailDone] = useState(true)
+  const [isVideoDone, setIsVideoDone] = useState(false)
+  const [isComputerDone, setIsComputerDone] = useState(false)
+  const [isPhoneDone, setIsPhoneDone] = useState(false)
+  
+  const turnDoneVideoStep = () => {setIsVideoDone(true)}
+  const turnDoneComputerStep = () => {setIsComputerDone(true)}
+  const turnDonePhoneStep = () => {setIsPhoneDone(true)}
 
   return (
     <>
@@ -73,7 +82,7 @@ export default function Home() {
                   </div>
                 </div>
               </div>
-              <h2 className="text-[#FFFFFF] text-xl mt-7">Dayana Mariano</h2>
+              <p className="text-[#FFFFFF] text-xl mt-7">Dayana Mariano</p>
               <p className="text-[#ACACAC] text-sm">Pactto member since 2024</p>
             </div>
           </div>
@@ -165,7 +174,7 @@ export default function Home() {
         </aside>
       )}
       <main
-        className={`flex min-h-screen flex-col items-start p-24 flex-1 text-white ${
+        className={`flex min-h-screen flex-col items-start flex-1 text-white  ${
           isAsideOpen && "opacity-60 bg-white/60 lg:opacity-100 lg:bg-transparent ease-in-out lg:ml-[257px] transition-[margin]"
         }`}
       >
@@ -177,7 +186,46 @@ export default function Home() {
             <MenuIcon className="text-white size-7 w-[37px]" />
           </button>
         )}
-        My uploads
+        <div className="p-8">
+          <h2 className="text-xl font-medium pb-5">Hey Dayana, welcome to Pactto!</h2>
+          <ul className="flex flex-col h-[120px] justify-between">
+            <li className="flex flex-row gap-3">
+              <span className={`py-[2px] px-[6px] rounded-lg text-[9px] font-medium leading-[14px] flex items-center ${isEmailDone ? "bg-[#1DBBA5]" : "bg-[#626262]"}`}>
+                {isEmailDone ? "DONE" : "TO DO"}
+              </span>
+              <p className="text-sm text-[#b8b8b8] font-medium">
+                Open your inbox and verify your email
+              </p>
+            </li>
+            <li className="flex flex-row gap-3">
+              <span className={`py-[2px] px-[6px] rounded-lg text-[9px] font-medium leading-[14px] flex items-center ${isVideoDone ? "bg-[#1DBBA5]" : "bg-[#626262]"}`}>
+                {isVideoDone ? "DONE" : "TO DO"}
+              </span>
+              <p className="text-sm text-[#b8b8b8] font-medium">
+                Check the <a href="https://www.youtube.com/watch?v=CvbvDGsZsKM&t=93s" target="_blank" onClick={turnDoneVideoStep} className="text-[#1DBBA5] underline">short video of Pactto in action</a>
+              </p>
+            </li>
+            <li className="flex flex-row gap-3">
+              <span className={`py-[2px] px-[6px] rounded-lg text-[9px] font-medium leading-[14px] flex items-center ${isComputerDone ? "bg-[#1DBBA5]" : "bg-[#626262]"}`}>
+                {isComputerDone ? "DONE" : "TO DO"}
+              </span>
+              <p className="text-sm text-[#b8b8b8] font-medium">
+                Wanna record your computer screen or review files? Download Pactto for <a href="https://pactto.com/#download" target="_blank" onClick={turnDoneComputerStep} className="text-[#1DBBA5] underline">Mac</a> or <a href="https://pactto.com/#download" target="_blank" onClick={turnDoneComputerStep} className="text-[#1DBBA5] underline">Windows</a> 
+              </p>
+            </li>
+            <li className="flex flex-row gap-3">
+              <span className={`py-[2px] px-[6px] rounded-lg text-[9px] font-medium leading-[14px] flex items-center ${isPhoneDone ? "bg-[#1DBBA5]" : "bg-[#626262]"}`}>
+                  {isPhoneDone ? "DONE" : "TO DO"}
+              </span>
+              <p className="text-sm text-[#b8b8b8] font-medium">
+                Wanna review videos, images or audio files with your phone or tablet? Download Pactto for <a href="https://apps.apple.com/us/app/pactto-record-video-feedback/id1662226619" target="_blank" onClick={turnDonePhoneStep}
+                className="text-[#1DBBA5] underline">iOS</a> or <a href="https://play.google.com/store/apps/details?id=com.pactto.replay" target="_blank" onClick={turnDonePhoneStep} className="text-[#1DBBA5] underline">Android</a>
+              </p>
+            </li>
+          </ul>
+
+        </div>
+        <h1>My uploads</h1>
       </main>
     </>
   );
