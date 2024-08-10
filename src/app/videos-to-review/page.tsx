@@ -19,7 +19,7 @@ const Chats: React.FC = () => {
       {isAsideOpen && (
         < Aside onClose={closeAside} />
       )}
-      <main id="chats" className={`flex min-h-screen flex-col items-start flex-1 text-white p-8 ${
+      <main className={`flex min-h-screen flex-col items-start flex-1 text-white p-8 ${
           isAsideOpen && "opacity-60 bg-white/60 lg:opacity-100 lg:bg-transparent ease-in-out lg:ml-[257px] transition-[margin]"
         }`}>
         <div className="flex flex-col w-full ">
