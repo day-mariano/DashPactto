@@ -41,7 +41,7 @@ const Chats: React.FC = () => {
               placeholder="Search"
               className="w-full p-4 border-2 border-[#626262] rounded-md appearance-none focus:outline-none bg-transparent hover:border-white focus:border-teal-500 "
             />
-            <div className="absolute inset-y-0 right-0 flex items-center bg-transparent pr-3">
+            <div className="absolute inset-y-0 right-0 flex items-center bg-transparent pr-3 pb-8">
               <SearchIcon className="w-6 " />
             </div>
           </div>
