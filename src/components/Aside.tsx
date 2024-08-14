@@ -12,6 +12,7 @@ import ViewCarouselIcon from "@mui/icons-material/ViewCarousel";
 import OndemandVideoIcon from "@mui/icons-material/OndemandVideo";
 import SubscriptionsIcon from "@mui/icons-material/Subscriptions";
 import SettingsIcon from "@mui/icons-material/Settings";
+import LiveHelpIcon from '@mui/icons-material/LiveHelp';
 import { useRouter, usePathname } from "next/navigation";
 
 interface AsideProps {
@@ -143,6 +144,13 @@ const Aside: React.FC<AsideProps> = ({onClose}) => {
             >
               <SettingsIcon className="text-[#BDBDBD] target:text-[#1DBBA5] size-6 mr-3" />
               Review Settings
+            </Link>
+            <Link
+              href="/faq"
+              className={`flex flex-row text-sm items-center w-full h-12 px-8 ${pathname === '/review-settings' ? 'bg-[#3a363f] text-[#1DBBA5]' : 'text-[#BDBDBD] bg-none'} hover:bg-[#4C4851]`}
+            >
+              <LiveHelpIcon className="text-[#BDBDBD] target:text-[#1DBBA5] size-6 mr-3" />
+              FAQ
             </Link>
           </nav>
           <button className="bg-[#B8B8B8] w-[193px] h-12 m-auto mb-4 rounded-3xl text-[#181818] text-sm font-semibold hover:bg-[#989898]">
