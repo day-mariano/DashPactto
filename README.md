@@ -1,4 +1,4 @@
-# 🎞 Clone Dashboardi Pactto
+# 🎞 Clone Dashboard Pactto
 
 Clone da página dashboard da Pactto https://app.pactto.com/register
 
@@ -17,7 +17,7 @@ Clone da página dashboard da Pactto https://app.pactto.com/register
 
 ## 🚀 Produção
 
-- [Pactto Vetcel](https://dash-pactto.vercel.app/)
+- [Pactto Vercel](https://dash-pactto.vercel.app/)
 
 ![Preview](public/Captura%20de%20Tela%202024-08-14%20às%2023.54.47.png)
 ![Preview](public/Captura%20de%20Tela%202024-08-14%20às%2023.56.06.png)
