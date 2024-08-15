@@ -13,7 +13,6 @@ Clone da página dashboard da Pactto https://app.pactto.com/register
 ## 📌 Sugestões
 
 - FAC
-- detalhes dos produtos
 
 
 ## 🚀 Produção
